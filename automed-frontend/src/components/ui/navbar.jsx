@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 import Button from './button';
 
@@ -38,41 +39,41 @@ const Navbar = ({ className }) => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className={cn(
                 "text-2xl font-bold transition-colors", 
                 scrolled ? "text-indigo-600" : "text-white"
               )}>
-                Zenith
+                AutoMed
               </span>
-            </a>
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
+            <Link to="/" className={cn(
+              "text-sm font-medium transition-colors hover:text-indigo-500",
+              scrolled ? "text-slate-700" : "text-white"
+            )}>
+              Home
+            </Link>
+            <Link to="/medicine-quality" className={cn(
+              "text-sm font-medium transition-colors hover:text-indigo-500",
+              scrolled ? "text-slate-700" : "text-white"
+            )}>
+              Quality Analysis
+            </Link>
             <a href="#features" className={cn(
               "text-sm font-medium transition-colors hover:text-indigo-500",
               scrolled ? "text-slate-700" : "text-white"
             )}>
               Features
             </a>
-            <a href="#testimonials" className={cn(
-              "text-sm font-medium transition-colors hover:text-indigo-500",
-              scrolled ? "text-slate-700" : "text-white"
-            )}>
-              Testimonials
-            </a>
             <a href="#pricing" className={cn(
               "text-sm font-medium transition-colors hover:text-indigo-500",
               scrolled ? "text-slate-700" : "text-white"
             )}>
               Pricing
-            </a>
-            <a href="#faq" className={cn(
-              "text-sm font-medium transition-colors hover:text-indigo-500",
-              scrolled ? "text-slate-700" : "text-white"
-            )}>
-              FAQ
             </a>
             <a href="#contact" className={cn(
               "text-sm font-medium transition-colors hover:text-indigo-500",
@@ -84,7 +85,7 @@ const Navbar = ({ className }) => {
           
           {/* Login/Signup Buttons */}
           <div className="hidden md:flex md:items-center md:space-x-3">
-            <a href="/login">
+            <Link to="/login">
               <Button 
                 variant="ghost" 
                 size="small"
@@ -94,12 +95,12 @@ const Navbar = ({ className }) => {
               >
                 Login
               </Button>
-            </a>
-            <a href="/signup">
+            </Link>
+            <Link to="/signup">
               <Button variant="primary" size="small">
                 Sign up
               </Button>
-            </a>
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -130,6 +131,18 @@ const Navbar = ({ className }) => {
       {/* Mobile menu */}
       <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg rounded-b-lg">
+          <Link
+            to="/"
+            className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50"
+          >
+            Home
+          </Link>
+          <Link
+            to="/medicine-quality"
+            className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50"
+          >
+            Quality Analysis
+          </Link>
           <a
             href="#features"
             className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50"
@@ -137,22 +150,10 @@ const Navbar = ({ className }) => {
             Features
           </a>
           <a
-            href="#testimonials"
-            className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50"
-          >
-            Testimonials
-          </a>
-          <a
             href="#pricing"
             className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50"
           >
             Pricing
-          </a>
-          <a
-            href="#faq"
-            className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50"
-          >
-            FAQ
           </a>
           <a
             href="#contact"
@@ -162,18 +163,18 @@ const Navbar = ({ className }) => {
           </a>
           <div className="pt-4 pb-3 border-t border-slate-200">
             <div className="flex items-center px-5">
-              <a href="/login" className="block w-full">
+              <Link to="/login" className="block w-full">
                 <Button variant="ghost" className="w-full mb-2">
                   Login
                 </Button>
-              </a>
+              </Link>
             </div>
             <div className="flex items-center px-5">
-              <a href="/signup" className="block w-full">
+              <Link to="/signup" className="block w-full">
                 <Button variant="primary" className="w-full">
                   Sign up
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
