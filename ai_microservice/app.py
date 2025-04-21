@@ -1,40 +1,49 @@
-# ai_microservice/app.py
 from flask import Flask, request, jsonify
-import joblib
 import numpy as np
+import joblib
 from sklearn.ensemble import RandomForestClassifier
-import os
+from sklearn.model_selection import train_test_split
+import pandas as pd
 
 app = Flask(__name__)
 
-# Dummy model training (normally you'd load a pre-trained model)
-def train_dummy_model():
-    X = np.array([
-        [5.0, 7.0], [3.2, 4.1], [6.1, 8.0], [1.2, 2.3], [7.4, 9.1]
-    ])
-    y = [1, 0, 1, 0, 1]  # 1 = Passed quality, 0 = Failed
-    model = RandomForestClassifier()
-    model.fit(X, y)
-    joblib.dump(model, 'quality_model.pkl')
+# Load dataset
+df = pd.read_csv("medicine_quality_dataset.csv")
+X = df.drop("quality_pass", axis=1)
+y = df["quality_pass"]
 
-if not os.path.exists('quality_model.pkl'):
-    train_dummy_model()
+# Train model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X, y)
 
-model = joblib.load('quality_model.pkl')
+# Save model (optional)
+# joblib.dump(model, "quality_model.pkl")
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
+    data = request.get_json()
+
+    # Expect all 6 parameters
+    required_fields = [
+        "chemical_stability",
+        "contamination_level",
+        "ph_level",
+        "sterility_index",
+        "temperature_exposure",
+        "moisture_content"
+    ]
+    
     try:
-        data = request.json  # should be something like { "param1": 5.5, "param2": 6.8 }
-        features = np.array([[data['param1'], data['param2']]])
-        prediction = model.predict(features)[0]
-        probability = model.predict_proba(features)[0][prediction]
+        values = [float(data[field]) for field in required_fields]
+        prediction = model.predict([values])[0]
+        confidence = model.predict_proba([values]).max()
+
         return jsonify({
-            'result': 'Pass' if prediction == 1 else 'Fail',
-            'confidence': round(float(probability), 2)
+            "result": "Pass" if prediction == 1 else "Fail",
+            "confidence": f"{confidence:.2f}"
         })
     except Exception as e:
-        return jsonify({ 'error': str(e) }), 500
+        return jsonify({"error": str(e)}), 400
 
 if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+    app.run(port=8000)

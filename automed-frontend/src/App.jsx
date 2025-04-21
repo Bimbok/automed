@@ -7,8 +7,12 @@ export default function App() {
     name: '',
     batchNumber: '',
     expiryDate: '',
-    param1: '',
-    param2: ''
+    chemical_stability: '',
+    contamination_level: '',
+    ph_level: '',
+    sterility_index: '',
+    temperature_exposure: '',
+    moisture_content: ''
   });
 
   const [medicines, setMedicines] = useState([]);
@@ -24,8 +28,12 @@ export default function App() {
       batchNumber: formData.batchNumber,
       expiryDate: formData.expiryDate,
       qualityParams: {
-        param1: parseFloat(formData.param1),
-        param2: parseFloat(formData.param2)
+        chemical_stability: parseFloat(formData.chemical_stability),
+        contamination_level: parseFloat(formData.contamination_level),
+        ph_level: parseFloat(formData.ph_level),
+        sterility_index: parseFloat(formData.sterility_index),
+        temperature_exposure: parseFloat(formData.temperature_exposure),
+        moisture_content: parseFloat(formData.moisture_content)
       }
     };
 
@@ -57,8 +65,12 @@ export default function App() {
         <input name="name" placeholder="Medicine Name" onChange={handleChange} className="w-full p-2 border" required />
         <input name="batchNumber" placeholder="Batch Number" onChange={handleChange} className="w-full p-2 border" required />
         <input name="expiryDate" type="date" onChange={handleChange} className="w-full p-2 border" required />
-        <input name="param1" type="number" step="any" placeholder="Param 1" onChange={handleChange} className="w-full p-2 border" required />
-        <input name="param2" type="number" step="any" placeholder="Param 2" onChange={handleChange} className="w-full p-2 border" required />
+        <input name="chemical_stability" type="number" step="any" placeholder="Chemical Stability" onChange={handleChange} className="w-full p-2 border" required />
+        <input name="contamination_level" type="number" step="any" placeholder="Contamination Level" onChange={handleChange} className="w-full p-2 border" required />
+        <input name="ph_level" type="number" step="any" placeholder="pH Level" onChange={handleChange} className="w-full p-2 border" required />
+        <input name="sterility_index" type="number" step="any" placeholder="Sterility Index" onChange={handleChange} className="w-full p-2 border" required />
+        <input name="temperature_exposure" type="number" step="any" placeholder="Temperature Exposure" onChange={handleChange} className="w-full p-2 border" required />
+        <input name="moisture_content" type="number" step="any" placeholder="Moisture Content" onChange={handleChange} className="w-full p-2 border" required />
         <button type="submit" className="bg-blue-500 text-white p-2 rounded">Submit</button>
       </form>
 
