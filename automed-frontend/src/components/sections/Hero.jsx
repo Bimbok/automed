@@ -15,28 +15,17 @@ const Hero = () => {
             Advanced analytics, real-time monitoring, and precise quality control for safer medicines.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
-            <Button variant="primary" size="large" className="min-w-32 sm:min-w-40">
+            <Button variant="primary" size="large" className="min-w-32 sm:min-w-40" onClick={() => window.location.href = '/medicine-quality'}>
               Get Started
             </Button>
-            <Button variant="outline" size="large" className="min-w-32 sm:min-w-40 border-white text-white hover:bg-slate-800">
+            <Button variant="outline" size="large" className="min-w-32 sm:min-w-40 border-white text-white hover:bg-slate-800" onClick={() => window.location.href = '#features'}>
               Learn More
             </Button>
-          </div>
-          
-          <div className="mt-16 relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg blur-sm opacity-75"></div>
-            <div className="relative bg-slate-900 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
-              <img 
-                src="/api/placeholder/1200/600" 
-                alt="Dashboard Preview" 
-                className="w-full h-auto rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
           </div>
         </div>
         <BackgroundBeams />
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
         <svg 
