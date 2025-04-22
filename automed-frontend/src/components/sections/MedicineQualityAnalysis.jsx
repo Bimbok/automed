@@ -494,22 +494,22 @@ const MedicineQualityAnalysis = () => {
                             </div>
                             <div className="mt-2 grid grid-cols-3 gap-x-2 gap-y-1 text-xs">
                               <div>
-                                <span className="font-medium text-slate-500">Chem:</span> {parseFloat(result.chemical_stability).toFixed(2)}
+                                <span className="font-medium text-slate-700">Chem:</span> <span className="text-slate-900">{parseFloat(result.chemical_stability).toFixed(2)}</span>
                               </div>
                               <div>
-                                <span className="font-medium text-slate-500">Cont:</span> {parseFloat(result.contamination_level).toFixed(3)}
+                                <span className="font-medium text-slate-700">Cont:</span> <span className="text-slate-900">{parseFloat(result.contamination_level).toFixed(3)}</span>
                               </div>
                               <div>
-                                <span className="font-medium text-slate-500">pH:</span> {parseFloat(result.ph_level).toFixed(1)}
+                                <span className="font-medium text-slate-700">pH:</span> <span className="text-slate-900">{parseFloat(result.ph_level).toFixed(1)}</span>
                               </div>
                               <div>
-                                <span className="font-medium text-slate-500">Ster:</span> {parseFloat(result.sterility_index).toFixed(2)}
+                                <span className="font-medium text-slate-700">Ster:</span> <span className="text-slate-900">{parseFloat(result.sterility_index).toFixed(2)}</span>
                               </div>
                               <div>
-                                <span className="font-medium text-slate-500">Temp:</span> {parseFloat(result.temperature_exposure).toFixed(2)}
+                                <span className="font-medium text-slate-700">Temp:</span> <span className="text-slate-900">{parseFloat(result.temperature_exposure).toFixed(2)}</span>
                               </div>
                               <div>
-                                <span className="font-medium text-slate-500">Moist:</span> {parseFloat(result.moisture_content).toFixed(2)}
+                                <span className="font-medium text-slate-700">Moist:</span> <span className="text-slate-900">{parseFloat(result.moisture_content).toFixed(2)}</span>
                               </div>
                             </div>
                           </div>
