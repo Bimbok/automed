@@ -47,7 +47,7 @@ const Navbar = ({ className }) => {
             </a>
           </div>
           
-          {/* Login/Signup Buttons */}
+          {/* Login/Signup Buttons
           <div className="hidden md:flex md:items-center md:space-x-4">
             <Link to="/login">
               <Button variant="ghost">Login</Button>
@@ -55,7 +55,7 @@ const Navbar = ({ className }) => {
             <Link to="/signup">
               <Button variant="primary">Sign up</Button>
             </Link>
-          </div>
+          </div> */}
           
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -129,8 +129,8 @@ const Navbar = ({ className }) => {
                 </Button>
               </Link>
             </div>
+            
           </div>
-
         </div>
       </div>
     </nav>

@@ -80,7 +80,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-indigo-900 to-slate-900 text-white">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-indigo-900 to-slate-900 text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -125,7 +125,7 @@ const Testimonials = () => {
 
           {/* Navigation arrows */}
           <button 
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-indigo-600 rounded-full p-2 text-white opacity-75 hover:opacity-100 transition-opacity"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-indigo-600 rounded-full p-2 text-black opacity-75 hover:opacity-100 transition-opacity"
             onClick={() => setActiveIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1))}
             aria-label="Previous testimonial"
           >
@@ -134,7 +134,7 @@ const Testimonials = () => {
             </svg>
           </button>
           <button 
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-indigo-600 rounded-full p-2 text-white opacity-75 hover:opacity-100 transition-opacity"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-indigo-600 rounded-full p-2 text-black opacity-75 hover:opacity-100 transition-opacity"
             onClick={() => setActiveIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1))}
             aria-label="Next testimonial"
           >
