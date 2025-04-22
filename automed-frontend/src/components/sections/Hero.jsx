@@ -8,11 +8,11 @@ const Hero = () => {
       <div className="h-full w-full bg-gradient-to-b from-slate-900 to-slate-800 relative flex flex-col items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-600 mb-6 leading-tight">
-            Elevate Your Digital Experience
+            Revolutionizing Medicine Quality Assurance
           </h1>
           <p className="text-slate-300 max-w-3xl mx-auto text-lg md:text-xl mb-8">
-            Explore a new dimension of digital solutions with our cutting-edge platform. 
-            Streamlined workflows, powerful insights, and seamless integration to transform your business.
+            Harness the power of AI to ensure pharmaceutical excellence. 
+            Advanced analytics, real-time monitoring, and precise quality control for safer medicines.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
             <Button variant="primary" size="large" className="min-w-32 sm:min-w-40">

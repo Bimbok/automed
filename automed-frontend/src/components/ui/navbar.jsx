@@ -111,14 +111,17 @@ const Navbar = ({ className }) => {
           >
             Contact
           </a>
+
           <div className="pt-4 pb-3 border-t border-slate-200">
+
             <div className="flex items-center px-5">
               <Link to="/login" className="block w-full">
-                <Button variant="ghost" className="w-full mb-2">
+                <Button variant="primary" className="w-full mb-2">
                   Login
                 </Button>
               </Link>
             </div>
+
             <div className="flex items-center px-5">
               <Link to="/signup" className="block w-full">
                 <Button variant="primary" className="w-full">
@@ -127,6 +130,7 @@ const Navbar = ({ className }) => {
               </Link>
             </div>
           </div>
+
         </div>
       </div>
     </nav>

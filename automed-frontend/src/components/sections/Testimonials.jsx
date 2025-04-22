@@ -5,38 +5,33 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Johnson',
-      role: 'CTO, TechScale Inc.',
-      content: 'Zenith transformed how our team collaborates. The platform is intuitive yet powerful, making it easy to onboard new team members while providing the advanced features our developers need. The analytics dashboard has become central to our decision-making process.',
-      avatar: '/api/placeholder/80/80'
+      name: 'Dr. Sarah Johnson',
+      role: 'Chief Quality Officer, PharmaCare Inc.',
+      content: 'AutoMed has revolutionized our quality control process. The AI-powered analysis provides unprecedented accuracy in detecting quality issues. We\'ve seen a 40% reduction in quality-related incidents since implementation.'
     },
     {
       id: 2,
-      name: 'David Chen',
-      role: 'Founder, Quantum Solutions',
-      content: 'We evaluated several platforms before choosing Zenith, and it\'s been the best decision for our growing company. The scaling capabilities are impressive - we started with just 5 team members and now have over 50 using the platform daily without any performance issues.',
-      avatar: '/api/placeholder/80/80'
+      name: 'Dr. David Chen',
+      role: 'Research Director, MedTech Solutions',
+      content: 'The comprehensive parameter monitoring system has transformed our quality assurance workflow. Real-time analysis and detailed reports have significantly improved our batch quality control process.'
     },
     {
       id: 3,
-      name: 'Emily Rodriguez',
-      role: 'Marketing Director, Elevate Brands',
-      content: 'As a marketing team constantly iterating on campaigns, Zenith\'s real-time collaboration features have eliminated the bottlenecks we used to face. The customizable workflows adapt perfectly to our creative process, and the analytics help us demonstrate clear ROI.',
-      avatar: '/api/placeholder/80/80'
+      name: 'Dr. Emily Rodriguez',
+      role: 'Quality Assurance Manager, Global Pharmaceuticals',
+      content: 'AutoMed\'s AI analysis has been instrumental in maintaining our high quality standards. The system\'s ability to detect subtle quality variations has helped us prevent potential issues before they affect our products.'
     },
     {
       id: 4,
       name: 'Michael Taylor',
-      role: 'Operations Manager, Global Nexus',
-      content: 'The automation capabilities in Zenith have saved our team countless hours on repetitive tasks. What used to take our team days now happens automatically in the background. Their customer support is also exceptional - responsive, knowledgeable, and genuinely helpful.',
-      avatar: '/api/placeholder/80/80'
+      role: 'Production Manager, HealthCare Labs',
+      content: 'The automated quality checks have streamlined our production process while ensuring compliance with pharmaceutical standards. The detailed analysis reports have become essential for our quality documentation.'
     },
     {
       id: 5,
-      name: 'Sophia Williams',
-      role: 'Product Designer, Creative Pulse',
-      content: 'Zenith\'s interface is a designer\'s dream - clean, intuitive, and thoughtfully crafted. I appreciate how the platform balances powerful functionality with ease of use. The design system integration options have streamlined our product development workflow significantly.',
-      avatar: '/api/placeholder/80/80'
+      name: 'Dr. Sophia Williams',
+      role: 'Quality Control Specialist, BioPharma Solutions',
+      content: 'AutoMed\'s precision in analyzing medicine quality parameters is exceptional. The system has helped us maintain consistent quality across all our production batches while reducing testing time significantly.'
     }
   ];
 
@@ -89,10 +84,10 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Trusted by Innovators
+            Trusted by Pharmaceutical Leaders
           </h2>
           <p className="text-lg text-indigo-200">
-            See what our customers are saying about their experience with our platform.
+            See how leading pharmaceutical companies are transforming their quality assurance with our AI-powered platform.
           </p>
         </div>
 
@@ -113,14 +108,6 @@ const Testimonials = () => {
                 <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
                   <Card className="bg-slate-800 border-slate-700 p-8 backdrop-blur-sm bg-opacity-70 shadow-xl">
                     <div className="flex flex-col items-center text-center">
-                      <div className="relative mb-6">
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full blur opacity-75"></div>
-                        <img 
-                          src={testimonial.avatar} 
-                          alt={testimonial.name}
-                          className="relative h-20 w-20 rounded-full border-2 border-indigo-300"
-                        />
-                      </div>
                       <div className="text-2xl text-indigo-300 mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="inline-block mb-1">
                           <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />

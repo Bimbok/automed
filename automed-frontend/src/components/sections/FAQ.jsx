@@ -4,33 +4,33 @@ const FAQ = () => {
   const faqs = [
     {
       id: 1,
-      question: 'How easy is it to get started with Zenith?',
-      answer: 'Getting started with Zenith is incredibly simple. After signing up, you\'ll have immediate access to our intuitive dashboard. Our onboarding process guides you through the essential features, and you can import your existing data in just a few clicks. Most users are up and running within minutes.',
+      question: 'How does AutoMed ensure accurate medicine quality analysis?',
+      answer: 'AutoMed uses advanced AI algorithms and machine learning to analyze multiple quality parameters of medicines. Our system continuously learns from data patterns and pharmaceutical standards to provide precise quality assessments. The platform is regularly updated with the latest pharmaceutical guidelines and quality standards.',
     },
     {
       id: 2,
-      question: 'Can I migrate data from other platforms?',
-      answer: 'Yes, we offer comprehensive migration tools to help you seamlessly transfer data from other platforms. Zenith supports imports from all major competitors, and our dedicated migration team is available to assist with complex transfers at no additional cost.',
+      question: 'What types of quality parameters does AutoMed analyze?',
+      answer: 'AutoMed analyzes a comprehensive range of quality parameters including chemical composition, physical properties, dissolution rates, stability, and contamination levels. The system can detect subtle variations that might indicate quality issues, helping prevent potential problems before they affect product quality.',
     },
     {
       id: 3,
-      question: 'Is Zenith suitable for small businesses and enterprises alike?',
-      answer: 'Absolutely! Zenith was designed to scale with your needs. Our Starter plan is perfect for small businesses and individuals, while our Professional and Enterprise plans offer advanced features for larger organizations. Many of our clients have scaled with us from startup to enterprise.',
+      question: 'Is AutoMed suitable for both small and large pharmaceutical companies?',
+      answer: 'Yes, AutoMed is designed to scale with your needs. Our platform is equally effective for small research labs and large pharmaceutical manufacturers. We offer different tiers of service to accommodate various production volumes and analysis requirements.',
     },
     {
       id: 4,
-      question: 'What kind of customer support do you offer?',
-      answer: 'We provide multi-tiered support across all plans. Starter plans include email support with 24-hour response times. Professional plans add priority support with faster response times and chat support. Enterprise plans include 24/7 dedicated support with a dedicated account manager and phone support.',
+      question: 'How does AutoMed handle data security and compliance?',
+      answer: 'We maintain the highest standards of data security and compliance. AutoMed is compliant with pharmaceutical industry regulations including GMP, GLP, and FDA guidelines. All data is encrypted, and we implement strict access controls to ensure the confidentiality of your quality analysis data.',
     },
     {
       id: 5,
-      question: 'How secure is my data with Zenith?',
-      answer: 'Security is our top priority. Zenith employs industry-leading encryption protocols, regular security audits, and compliance with major standards including GDPR, HIPAA, and SOC 2. All data is encrypted both in transit and at rest, and we offer optional two-factor authentication for all accounts.',
+      question: 'Can AutoMed integrate with existing laboratory systems?',
+      answer: 'Yes, AutoMed offers seamless integration with most laboratory information management systems (LIMS) and quality management systems. Our API allows for easy data exchange and automated workflows, ensuring smooth integration with your existing infrastructure.',
     },
     {
       id: 6,
-      question: 'Can I cancel my subscription at any time?',
-      answer: 'Yes, you can cancel your subscription at any time with no cancellation fees. For monthly plans, you\'ll retain access until the end of your billing cycle. For annual plans, we offer prorated refunds for the unused portion of your subscription.',
+      question: 'What kind of support and training does AutoMed provide?',
+      answer: 'We provide comprehensive support including 24/7 technical assistance, regular system updates, and detailed training programs. Our support team includes pharmaceutical quality experts who can help with both technical and regulatory aspects of quality analysis.',
     },
   ];
 
@@ -48,7 +48,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-slate-600">
-            Find answers to common questions about Zenith's features, pricing, and support.
+            Find answers to common questions about medicine quality analysis and our platform.
           </p>
         </div>
 
