@@ -39,9 +39,7 @@ const Navbar = ({ className }) => {
             <a href="#features" className="text-sm font-medium text-slate-700 hover:text-indigo-500">
               Features
             </a>
-            <a href="#pricing" className="text-sm font-medium text-slate-700 hover:text-indigo-500">
-              Pricing
-            </a>
+        
             <a href="#contact" className="text-sm font-medium text-slate-700 hover:text-indigo-500">
               Contact
             </a>
