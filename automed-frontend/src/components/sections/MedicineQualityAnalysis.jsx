@@ -5,7 +5,7 @@ import Input from '../ui/input';
 import Button from '../ui/button';
 
 // Define the API URL - make sure this matches your Flask app port
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://automed-ruby.vercel.app/api';
 
 const MedicineQualityAnalysis = () => {
   // Form state
