@@ -5,7 +5,7 @@ import google.generativeai as genai
 import json
 import csv
 from datetime import datetime
-from dotenv import load_dotenv, find_dotenv
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
@@ -114,6 +114,7 @@ def analyze():
         # Extract the JSON response
         try:
             # First try to parse the text as JSON directly
+            print(response.text)
             result = json.loads(response.text)
         except json.JSONDecodeError:
             # If that fails, try to extract JSON from the text
