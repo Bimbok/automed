@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BackgroundBeams } from '../ui/background-beams';
 import Button from '../ui/button';
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section id="hero" className="relative h-screen w-full overflow-hidden flex items-center">
       <div className="h-full w-full bg-gradient-to-b from-slate-900 to-slate-800 relative flex flex-col items-center justify-center">
@@ -15,7 +17,7 @@ const Hero = () => {
             Advanced analytics, real-time monitoring, and precise quality control for safer medicines.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
-            <Button variant="primary" size="large" className="min-w-32 sm:min-w-40" onClick={() => window.location.href = '/medicine-quality'}>
+            <Button variant="primary" size="large" className="min-w-32 sm:min-w-40" onClick={() => navigate('/medicine-quality')}>
               Get Started
             </Button>
             <Button variant="outline" size="large" className="min-w-32 sm:min-w-40 border-white text-white hover:bg-slate-800" onClick={() => window.location.href = '#features'}>
