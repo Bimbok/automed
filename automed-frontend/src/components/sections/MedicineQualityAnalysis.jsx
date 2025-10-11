@@ -5,7 +5,7 @@ import Input from "../ui/input";
 import Button from "../ui/button";
 
 // Define the API URL - make sure this matches your Flask app port
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://automed-q0ou.onrender.com/";
 
 const MedicineQualityAnalysis = () => {
   // Form state
@@ -650,4 +650,3 @@ const MedicineQualityAnalysis = () => {
   );
 };
 export default MedicineQualityAnalysis;
-
